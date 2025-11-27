@@ -44,6 +44,8 @@ class Afirstperson415Character : public ACharacter
 	/** Look Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	class UInputAction* LookAction;
+
+	
 	
 public:
 	Afirstperson415Character();
@@ -66,6 +68,9 @@ public:
 	USkeletalMeshComponent* GetMesh1P() const { return Mesh1P; }
 	/** Returns FirstPersonCameraComponent subobject **/
 	UCameraComponent* GetFirstPersonCameraComponent() const { return FirstPersonCameraComponent; }
+
+	UPROPERTY(EditAnywhere)
+	bool isTeleporting;
 
 };
 
